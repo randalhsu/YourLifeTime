@@ -126,6 +126,7 @@
   form select { padding: 2px 4px; }
   form button { padding: 2px 10px; }
   form a { color: inherit; opacity: 0.65; }
+  #legend { flex-basis: 100%; text-align: center; opacity: 0.65; }
   #err { color: var(--dot-now); font-size: 14px; text-align: center; }
   #stage {
     flex: 1;
@@ -141,6 +142,7 @@
 <body>
 <div id="stage"><canvas id="grid"></canvas></div>
 <form id="form">
+  <p id="legend" data-t="legend">Each row is a year, each mark a week</p>
   <label><span data-t="birthday">Birthday</span> <input type="date" id="birthday" required></label>
   <label><span data-t="expectancy">Life expectancy</span> <input type="number" id="expectancy" min="1" max="100" value="80" required></label>
   <label><span data-t="theme">Theme</span> <select id="theme">
@@ -184,6 +186,7 @@ const MSG = {
     'theme-midnight': 'Midnight', 'theme-sakura': 'Sakura',
     'shape': 'Shape', 'shape-dot': 'Dot', 'shape-square': 'Square',
     'download': 'Download',
+    'legend': 'Each row is a year, each mark a week',
     'inspired': 'Inspired by Wait But Why',
     'err-birthday': 'Please enter your birthday',
     'err-future': 'Birthday cannot be in the future',
@@ -197,6 +200,7 @@ const MSG = {
     'theme-midnight': '午夜', 'theme-sakura': '櫻花',
     'shape': '形狀', 'shape-dot': '圓點', 'shape-square': '方塊',
     'download': '下載圖片',
+    'legend': '每列一年，每格一週',
     'inspired': '靈感來源：Wait But Why',
     'err-birthday': '請輸入生日',
     'err-future': '生日不可在未來',
